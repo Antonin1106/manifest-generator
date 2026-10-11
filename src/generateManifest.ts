@@ -1,6 +1,3 @@
-// src/generateManifest.ts
-// Load app's assets dynamically
-
 import { type WebManifest } from '@json-types/web-manifest';
 import generateManifestIcons from './generateManifestIcons';
 import encodeManifest from './encodeManifest';
