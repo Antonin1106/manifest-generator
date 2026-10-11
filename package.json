@@ -1,5 +1,5 @@
 {
-  "name": "manifest-generator",
+  "name": "@antonin1106/manifest-generator",
   "version": "0.0.1",
   "description": "A dynamic Web App Manifest generator",
   "keywords": [
@@ -50,5 +50,8 @@
       "npm run lint:fix",
       "npm run prettier:write"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
