@@ -1,5 +1,6 @@
 import { type WebManifest } from '@json-types/web-manifest';
 import { IconsOptions } from './types/app.types';
+import { buildIconSet, resolveIconSources } from './utils';
 
 /**
  * Generates configurable icons for a web manifest and returns the updated manifest.
