@@ -1,0 +1,36 @@
+{
+  "name": "manifest-generator",
+  "version": "1.0.0",
+  "description": "A dynamic Web App Manifest generator",
+  "keywords": [
+    "manifest",
+    "webmanifest",
+    "generator"
+  ],
+  "license": "MIT",
+  "author": "Antonin1106",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@json-types/web-manifest": "^0.3.0"
+  }
+}
