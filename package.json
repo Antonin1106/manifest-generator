@@ -24,9 +24,12 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run typecheck && npm run build"
+    "prepublishOnly": "npm run typecheck && npm run build",
+    "prettier:write": "npx prettier . --write",
+    "prettier:check": "npx prettier . --check"
   },
   "devDependencies": {
+    "prettier": "3.9.10",
     "tsup": "^8.5.1",
     "typescript": "^7.0.2"
   },
