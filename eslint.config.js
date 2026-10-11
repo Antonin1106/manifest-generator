@@ -6,7 +6,7 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 export default defineConfig([
   globalIgnores(['dist']),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.ts'],
 
     extends: [
       js.configs.recommended,
