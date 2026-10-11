@@ -10,11 +10,9 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-server/data/**
-src/assets/cards/**
 coverage
-buildedCards
 *.local
+.eslintcache
 
 # Editor directories and files
 .vscode

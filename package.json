@@ -27,19 +27,28 @@
     "prepublishOnly": "npm run typecheck && npm run build",
     "prettier:write": "npx prettier . --write",
     "prettier:check": "npx prettier . --check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint . --cache",
+    "lint:fix": "eslint . --cache --fix"
   },
   "devDependencies": {
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
-    "prettier": "3.9.10",
+    "prettier": "^3.9.10",
     "tsup": "^8.5.1",
-    "typescript": "^7.0.2"
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4"
   },
   "dependencies": {
+    "@eslint/js": "^10.0.1",
     "@json-types/web-manifest": "^0.3.0"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": [
+      "npm run lint:fix",
+      "npm run prettier:write"
+    ]
   }
 }
